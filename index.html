@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
-            <button class='navbar-toggler' type='button' data-toggle='collapse' data-target="#Navbar">
+            <button class='navbar-toggler' type='button'  id="navbar-toggler">
                 <span class='navbar-toggler-icon'></span>
             </button>
             <a class="navbar-brand mr-auto" href='#'><img src='img/logo.png' height="30" width='41'></a>
@@ -29,11 +29,49 @@
                    <li class="nav-item"><a class="nav-link"href="./aboutus.html"><span class='fa fa-info fa-lg'></span> About</a></li>
                    <li class="nav-item"><a class="nav-link" href='#'><span class='fa fa-list'></span> Menu</a></li>
                    <li class="nav-item"><a class="nav-link" href='./contactus.html'><span class='fa fa-address-card fa-lg'></span> Contact</a></li>
-               </ul>
+                </ul>
+                <ul class="navbar-nav ml-auto" id='log-in'>
+                   <li class="nav-item "><a class="nav-link" href='#'><span class='fa fa-sign-in fa-lg'></span> Log in</a></li> 
+                </ul>   
+                
             </div>
         </div>
 
     </nav>
+    <!-------------------LOGIN MODAL------------------------->
+    <div class="modal fade " id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                        <h5 class="modal-title text-body " id="logInModalLabel">Log In</h5>
+                        <button type="button" class="close" id='logIn-modalClose' aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <form >
+                        <div class="form-group row ">
+                            
+                            <input type="text" class="form-control col-4 mx-2" name="email" placeholder="Enter email">
+                            <input type="password"   class="form-control col-4 mx-2" name="password" placeholder="Password">
+                        </div>    
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                              Remember Me
+                            </label>
+                          </div>
+                    </form>   
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id='logIn-modalCancel' >Cancel</button>
+                        <button type="button" class="btn btn-primary">Sign in</button>
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+    </div>            
+    <!-------------------JUMBOTRON----------------------------->
 
     <header class='jumbotron'>
         <div class='container'>
@@ -45,18 +83,18 @@
                 <div class='col-12 col-sm-3'>
                     <img class='img-fluid' src="img/logo.png">
                 </div>
-                <div class='col-12 col-sm-3 mt-4 align-self-center'>
-                    <button type="button" class="btn btn-warning " data-toggle="modal" data-target="#exampleModal">
+                <div class='col-12 col-sm-3 mt-4 align-self-center justify-content-center'>
+                    <button type="button" class="btn btn-block btn-warning " id='reserve-button'>
                         Reserve Table
                       </button>
                 </div>      
                     <!-- Modal -->
                 <div class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
+                    <div class="modal-dialog modal-lg" role="document">
                          <div class="modal-content">
                             <div class="modal-header">
                                     <h5 class="modal-title text-body " id="exampleModalLabel">Reserve a Table</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <button type="button" class="close"   id='reserve-modalClose' aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                             </div>
@@ -68,43 +106,43 @@
                                                <!-- Default inline 1-->
                                                    <div class="  custom-control custom-radio custom-control-inline">
                                                    <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
-                                                   <label class="custom-control-label" for="defaultInline1">1</label>
+                                                   <label class="custom-control-label text-body" for="defaultInline1">1</label>
                                                    </div>
                                                    
                                                    <!-- Default inline 2-->
                                                    <div class="custom-control custom-radio custom-control-inline">
                                                    <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
-                                                   <label class="custom-control-label" for="defaultInline2">2</label>
+                                                   <label class="custom-control-label text-body" for="defaultInline2">2</label>
                                                    </div>
                                                    
                                                    <!-- Default inline 3-->
                                                    <div class="custom-control custom-radio custom-control-inline ">
                                                    <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
-                                                   <label class="custom-control-label" for="defaultInline3">3</label>
+                                                   <label class="custom-control-label text-body" for="defaultInline3">3</label>
                                                    </div>
                                                    
                                                    <!-- Default inline 4-->
                                                    <div class="custom-control custom-radio custom-control-inline">
                                                        <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
-                                                       <label class="custom-control-label" for="defaultInline4">4</label>
+                                                       <label class="custom-control-label text-body" for="defaultInline4">4</label>
                                                    </div>
                                                    
                                                    <!-- Default inline 5-->
                                                    <div class="custom-control custom-radio custom-control-inline col-1">
                                                            <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample">
-                                                           <label class="custom-control-label" for="defaultInline5">5</label>
+                                                           <label class="custom-control-label text-body" for="defaultInline5">5</label>
                                                        </div>
                                                    
                                                        <!-- Default inline 6-->
                                                    <div class="custom-control custom-radio custom-control-inline ">
                                                                <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample">
-                                                               <label class="custom-control-label" for="defaultInline6">6</label>
+                                                               <label class="custom-control-label text-body" for="defaultInline6">6</label>
                                                    </div>
                                            </div>
                                        </div>
                                        <div class="form-group row">
                                         <label class='col-4  col-form-label text-body' ><strong>Section</strong></label>
-                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <div class="btn-group btn-group-toggle" id="smoke-button">
                                             <label class="btn btn-success active">
                                               <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-smoking
                                             </label>
@@ -120,20 +158,21 @@
                                                    <input type="text"   class="form-control col-3 ml-2 " name="Time" placeholder="Time">
                                        </div>
                                        
-                                   </form>
+                                </form>
                                        
                                 
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-secondary" id='reserve-modalCancel' >Cancel</button>
                                         <button type="button" class="btn btn-primary">Reserve</button>
                                     </div>
                                     
-                            </div>   
+                             </div>   
                         </div>  
                  
-                    </div>
+                     </div>
+                 </div>     
             
-            </div>    </div> 
+            </div>   
         
         </div>       
                         
@@ -146,7 +185,7 @@
     <div class="container">
         <div class='row row-content'>
             <div class='col'>
-                <div id="mycarousel" class='carousel slide' data-ride="carousel">
+                <div id="mycarousel" class='carousel slide' >
                     <div class='carousel-inner' role='listbox'>
                         <div class='carousel-item active'>
                             <img class='d-block img-fluid'
@@ -174,15 +213,17 @@
                             
                             </div>
                         </div>
-                        <ol class='carousel-indicators'>
-                            <li data-target="#mycarousel" data-slide-to="0" class='active'></li>
-                            <li data-target="#mycarousel" data-slide-to="1"></li>
-                            <li data-target="#mycarousel" data-slide-to="2"></li>
-                        </ol>
-                        <a class="carousel-control-prev" href='#mycarousel' role='button' data-slide='prev'>
+                        <ol class="carousel-indicators">
+                            <li class="carousel-item1 active"></li>
+                            <li class="carousel-item2"></li>
+                            <li class="carousel-item3"></li>
+                            
+                          </ol>
+                      
+                        <a class="left carousel-control-prev" href='#mycarousel' role='button' >
                             <span class="carousel-control-prev-icon" ></span>
                         </a>
-                        <a class="carousel-control-next" href='#mycarousel' role='button' data-slide='next'>
+                        <a class="right carousel-control-next" href='#mycarousel' role='button' >
                             <span class="carousel-control-next-icon" ></span>
                         </a>
                         
@@ -294,11 +335,32 @@
  <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>    
  
  <script>
     $(document).ready(function(){
         $("#mycarousel").carousel( { interval: 2000 } );
+
+        $(".carousel-item1").click(function(){
+        $("#mycarousel").carousel(0);
+        });
+
+        $(".carousel-item2").click(function(){
+            $("#mycarousel").carousel(1);
+        });
+
+        $(".carousel-item3").click(function(){
+            $("#mycarousel").carousel(2);
+        }); 
+
+        $(".left").click(function(){
+             $("#mycarousel").carousel("prev");
+        });
+
+        $(".right").click(function(){
+            $("#mycarousel").carousel("next");
+        });
+
         $("#carouselButton").click(function(){
                 if ($("#carouselButton").children("span").hasClass('fa-pause')) {
                     $("#mycarousel").carousel('pause');
@@ -311,8 +373,33 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+        $("#navbar-toggler").click(function(){
+                $("#Navbar").toggle();
+        });
+        $("#reserve-button").click(function(){
+                $("#exampleModal").modal('show');
+        });
         
-    });
+        $("#reserve-modalClose").click(function(){
+                $("#exampleModal").modal('hide');
+        });
+        $("#smoke-button").click(function(){
+                $(this).button('toggle');
+         }); 
+         $("#reserve-modalCancel").click(function(){
+                $("#exampleModal").modal('hide');
+        });
+        $("#log-in").click(function(){
+                $("#logInModal").modal('show');
+        });
+        
+        $("#logIn-modalClose").click(function(){
+                $("#logInModal").modal('hide');
+        });
+        $("#logIn-modalCancel").click(function(){
+                $("#logInModal").modal('hide');
+        });
+    });  
 </script>
 
 </body>
